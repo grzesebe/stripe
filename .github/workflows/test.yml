@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - feat/pass_returnURL
+  workflow_dispatch:
 
 jobs:
   build:
