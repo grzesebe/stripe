@@ -1,6 +1,0 @@
-[
-	{
-		"pkg": "@capacitor-community/stripe",
-		"classpath": "com.getcapacitor.community.stripe.StripePlugin"
-	}
-]
