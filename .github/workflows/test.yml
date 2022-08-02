@@ -22,8 +22,11 @@ jobs:
 
       - name: Build
         run: npm run build # The build command of your project
-        
+      
       - name: Create out folder
+        run: mkdir ./out
+       
+      - name: Move all out folder
         run: mv * ./out
     
       - name: Push
