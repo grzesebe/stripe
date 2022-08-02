@@ -22,12 +22,15 @@ jobs:
 
       - name: Build
         run: npm run build # The build command of your project
+        
+      - name: Create out folder
+        run: mv -vt out/ ./!(out)
     
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
           BRANCH: test-returnUrl # The branch name where you want to push the assets
-          FOLDER: ./ # The directory where your assets are generated
+          FOLDER: out # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
