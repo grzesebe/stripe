@@ -26,8 +26,8 @@ jobs:
       - name: Create out folder
         run: mkdir ./out
        
-      - name: Move all out folder
-        run: mv * ./out
+      - name: Move all to out folder
+        run: ls | grep -v out | xargs mv -t out
     
       - name: Push
         uses: s0/git-publish-subdir-action@develop
