@@ -24,7 +24,7 @@ jobs:
         run: npm run build # The build command of your project
         
       - name: Create out folder
-        run: mv -vt out/ ./!(out)
+        run: mv * ./out
     
       - name: Push
         uses: s0/git-publish-subdir-action@develop
